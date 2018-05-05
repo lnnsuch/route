@@ -9,8 +9,8 @@ group1 := route.Group("/aa", public1, public2)
 	group1.Get("/zz/([0-9]+)", index2)
 	group1.Get("/zz/([\\w]+)", index3)
 }
-```
 route.Run("0.0.0.0:3000")
+```
 
 路由组函数的参数可以为空或者为 *route.Context
 
