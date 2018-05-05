@@ -22,6 +22,11 @@ func (g *GroupRoute) Group(path string, handle ...interface{}) *GroupRoute {
 	return group
 }
 
+// 添加公共函数
+func (g *GroupRoute) Use(handle ...interface{}) {
+	g.combineHandle(handle...)
+}
+
 // 拼接url path
 func (g *GroupRoute) combinePath(p string) string {
 	return path.Join(g.path, p)

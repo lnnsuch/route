@@ -49,6 +49,11 @@ func Run(addr string) {
 	mainServe.Run(addr)
 }
 
+// 添加公共函数
+func Use(handle ...interface{}) {
+	mainServe.Use(handle...)
+}
+
 // 用户组
 func Group(route string, handle ...interface{}) *GroupRoute {
 	return mainServe.Group(route, handle...)
